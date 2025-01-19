@@ -294,7 +294,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
-
+ 
 res_1, res_2 = st.columns([1,1])
 with res_1:
     st.markdown(f"<h5 style='color:#50C878;'> WEARS: Wearable Emotion AI with Real-time Sensor data</h5>", unsafe_allow_html=True)
