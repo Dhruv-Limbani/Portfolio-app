@@ -80,8 +80,7 @@ with intro:
     st.write(
         """
         Hello! I'm Dhruv, a graduate student at Columbia University pursuing MS in Computer Science with a focus on Machine Learning.
-        I completed my Bachelor's in Computer Science and Engineering at SRM Institute of Science and Technology, where I developed a 
-        passion for solving real-world problems using Machine Learning, Computer Vision, Natural Language Processing, and Generative AI.
+        I completed my Bachelor's in Computer Science and Engineering at SRM Institute of Science and Technology, where I developed a passion for solving real-world problems through both software development and advanced technologies like Machine Learning, Computer Vision, Natural Language Processing, and Generative AI.
         """
     )
     import streamlit as st
@@ -114,7 +113,7 @@ with edu:
     st.markdown("""
         - MS in Computer Science
             * ***Track***: Machine Learning
-            * ***Expected Graduation***: December 2025
+            * Sep 2024 - Dec 2025
             * ***GPA***: 4.0
 
     """)
@@ -122,7 +121,7 @@ with edu:
     st.markdown("""
         - B.Tech in Computer Science and Engineering
             * ***Track***: Big Data Analytics
-            * September 2020 - June 2024
+            * Sep 2020 - Jun 2024
             * ***GPA***: 9.79/10
 """)
 
@@ -141,9 +140,10 @@ with skills:
     st.markdown(
         """
         <p><b><span style='color:#50C878;'>Programming Languages:</span></b> C, C++, Python, SQL</p>
-        <p><b><span style='color:#50C878;'>Data Analysis and Visualization:</span></b> Numpy, Pandas, Matplotlib, Seaborn</p>
+        <p><b><span style='color:#50C878;'>Data Analysis and Visualization:</span></b> MS Excel, Power Query, DAX, NumPy, Pandas, Matplotlib, Seaborn</p>
         <p><b><span style='color:#50C878;'>Machine Learning:</span></b> Scikit-Learn, TensorFlow, PyTorch, OpenCV, NLTK</p>
-        <p><b><span style='color:#50C878;'>Web Development:</span></b> Streamlit, FastAPI</p>
+        <p><b><span style='color:#50C878;'>Web Development:</span></b> FastAPI, Streamlit</p>
+        <p><b><span style='color:#50C878;'>Additional tools:</span></b> Git, Visual Studio Code, Jupyter, Google Colab, MySQL Workbench</p>
         <p><b><span style='color:#50C878;'>Soft Skills:</span></b> Problem Solving, Collaboration, Time Management, Adaptability, Active Listening</p>
         """,
         unsafe_allow_html=True
@@ -160,22 +160,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(f"<h5 style='color:#50C878;'> - Samsung R&D Institute, Bangalore, India</h5>", unsafe_allow_html=True)
+st.markdown(f"<h5 style='color:#50C878;'> - Samsung R&D Institute India-Bangalore (SRI-B) Bangalore, IN</h5>", unsafe_allow_html=True)
 st.markdown("""
-    - Software Developer Intern, May 2023 - July 2023
-        * Collaborated with the On-Device AI Solutions team to develop and train a Recurrent Neural Network (RNN) model for predicting 
-        user smartphone tasks from monthly smartphone usage data of 10 different apps
-        * Reconstructed a graph-based approach to log user activity patterns in form of sequential adjacency matrices
-        * Identified and communicated inefficiency and incompatibility of chosen approach to team, leading to valuable
-        insights and process improvements
+    - Software Development Intern, May 2023 - Jul 2023
+        * Collaborated with the On-Device AI Solutions team to develop an RNN-based model for predicting smartphone
+        tasks, using monthly data from 10+ apps
+        * Reconstructed a graph-based approach to log user activity patterns, utilizing previous 7 days’ graphs as sequential
+        adjacency matrices to predict next day’s graph, testing its applicability to the current problem statement
+        * Identified and communicated inefficiency and incompatibility of graph-based approach due to high memory usage
+        despite an RMSE of 0.2 in task prediction, informing the team’s decision-making process
 """)
 st.markdown("""
-    - Samsung PRISM Research Intern, July 2022 - February 2023
-        * Partnered on Sensor based Mood Profiling system to detect emotion in real-time and developed two Android
-        WearOS based apps using Java and Android studio for data collection and mood prediction
-        * Delivered lightweight TFLite model of Multi Layer Perceptron with 93.75% accuracy with an architecture of optimum
-        set of sensors (Accelerometer, Gyroscope, Heart Rate)
-        * Presented and published the work at 2023 IEEE (CONECCT) and was honoured with Certificate of Excellence
+    - Samsung PRISM - ML Research Intern (On-Device AI Team), Jul 2022 - Feb 2023
+        * Partnered on a Sensor-based Mood Profiling system to detect emotions in real-time, integrating accelerometer,
+        gyroscope, and heart rate data from 78 volunteers for accurate mood prediction
+        * Developed two Android WearOS apps using Java and Android Studio for seamless data collection and mood tracking,
+        with Firebase as the backend database to store and sync sensor data in real-time
+        * Engineered a lightweight TFLite model based on a Multi-Layer Perceptron architecture, achieving 93.75% accuracy
+        by optimizing sensor data inputs (Accelerometer, Gyroscope, Heart Rate) for mood prediction
+        * Presented and published findings at the 2023 IEEE CONECCT, earning a Certificate of Excellence
 """)
 
 
@@ -194,32 +197,42 @@ if options == 'Data Analysis and Predictive Modeling':
     with proj_1:
         st.markdown(f"<h5 style='color:#50C878;'> - German Credit Risk Analysis and Classification Model</h5>", unsafe_allow_html=True)
         st.markdown("""
-            * Performed data preprocessing, exploratory data analysis (EDA) with visualizations, and feature engineering on 21 attributes 
-            from Statlog (German Credit Data)
-            * Identified 12 most impactful attributes and conducted hyperparameter tuning on multiple classification models
-            * Developed a full-stack web application displaying an interactive dashboard for data analysis and deployed classification
-            model based on SVM algorithm with 78% accuracy on Streamlit Cloud for users to make real-time predictions 
+            * Preprocessed data, performed EDA with visualizations and feature engineering on German Credit Data
+            * Selected 12 key attributes using statistical tests and performed hyperparameter tuning on classification algorithms
+            * Developed and deployed a full-stack web app with an interactive dashboard and SVM-based classification model
+            (78% accuracy) on Streamlit Cloud for real-time predictions
         """)
-        st.link_button('Interactive Dashboard', 'https://german-credit-analysis-and-modelling-by-dhruv-limbani.streamlit.app/')
+        st.link_button('Check Project', 'https://github.com/Dhruv-Limbani/German-Credit-Data-Analysis-and-Modeling')
 
     with proj_2:
-        st.markdown(f"<h5 style='color:#50C878;'> - HR Data Analysis for Employee Churn Prediction</h5>", unsafe_allow_html=True)
+        st.markdown(f"<h5 style='color:#50C878;'> - Superstore Sales Data Analysis</h5>", unsafe_allow_html=True)
         st.markdown("""
-            * Performed data analysis and predictive modelling on HR data using Python, Pandas and Seaborn
-            * Developed a machine learning model using Scikit-Learn to predict employee churn based on various factors such 
-            as department, salary range, promotion in last 5 years, work accidents, time spent in company etc.
+            * Built an ETL pipeline using Power Query to clean and analyze sales data across four regions, time, and products
+            * Analyzed top-performing regions, low-profit areas, and top 10 best-selling products by volume and revenue, with
+            insights on customer segments, shipping mode impact, and order trends
+            * Created interactive visualizations to track sales, profit, and profit margin trends for data-driven decision-making
         """)
+        st.link_button('Check Project', 'https://github.com/Dhruv-Limbani/Superstore-Sales-Data-Analysis')
+    
+    st.markdown(f"<h5 style='color:#50C878;'> - HR Data Analysis for Employee Churn Prediction</h5>", unsafe_allow_html=True)
+    st.markdown("""
+        * Performed data analysis and predictive modelling on HR data using Python, Pandas and Seaborn
+        * Developed a machine learning model using Scikit-Learn to predict employee churn based on various factors such 
+        as department, salary range, promotion in last 5 years, work accidents, time spent in company etc.
+    """)
 
+    
 if options == 'Computer Vision':
     proj_3, proj_4 = st.columns([1,1])
     with proj_3:
         st.markdown(f"<h5 style='color:#50C878;'> - Pediatric Pneumonia Detection from Chest X-ray Images</h5>", unsafe_allow_html=True)
         st.markdown("""
-            * Teamed up on developing a CNN model to detect pneumonia from chest X-ray images, achieving an accuracy of 95.97%
-            * Addressed class imbalance by utilizing a Deep Convolutional Generative Adversarial Network (DCGAN) to generate
-            synthetic images for minority class
-            * Outperformed a fine-tuned pre-trained VGG16 model by 2% accuracy with CNN model on benchmark dataset
+            * Teamed up on developing a CNN model to detect pneumonia from chest X-ray images, achieving 95.97% accuracy
+            * Designed and trained a DCGAN to generate synthetic images for the minority class, addressing class imbalance
+            * Outperformed a fine-tuned pre-trained VGG16 model by 2% accuracy, with a recall of 98% for Pneumonia class
+            and 91% for Normal class on the benchmark dataset
         """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Pediatric-Pneumonia-Detection')
 
     with proj_4:
         st.markdown(f"<h5 style='color:#50C878;'> - CNN based American Sign Language Alphabets Translation</h5>", unsafe_allow_html=True)
@@ -228,41 +241,51 @@ if options == 'Computer Vision':
             * Constructed a CNN architecture using TensorFlow to classify 26 ASL alphabets with an accuracy of 99.71%
             * Fine-tuned MobileNetV2 model to enhance performance of system and improved accuracy to 99.81%
         """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Sign-Language-Translator')
 
 if options == 'Natural Language Processing':
     proj_5, proj_6 = st.columns([1,1])
     with proj_5:
         st.markdown(f"<h5 style='color:#50C878;'> - Financial Sentiment Analysis and Categorization</h5>", unsafe_allow_html=True)
         st.markdown("""
-            * Carried out a thorough text analysis with NLP techniques such as tokenization, stopword removal, lemmatization, 
-            and n-gram extraction to enhance model performance on financial datasets
-            * Evaluated various models, including three traditional classifiers (Logistic Regression, SVM, Random Forest), Dense Neural Networks,
-            Recurrent Neural Networks (LSTM, BiLSTM) and transformer architecture (BERT), to identify the best-performing approach
+            * Carried out text preprocessing with NLP techniques (tokenization, stopword removal, lemmatization, n-gram extraction) to improve model performance on financial datasets
+            * Evaluated various models (Logistic Regression, SVM, Random Forest, DNNs, LSTM, BiLSTM, BERT) to identify
+            the best-performing approach
             * Achieved up to 90.5% accuracy on test data using Bidirectional LSTM for financial sentiment classification
         """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Financial-Sentiment-Analysis-using-NLP')
 
     with proj_6:
         st.markdown(f"<h5 style='color:#50C878;'> - Recipe Recommendation System based on Ingredients</h5>", unsafe_allow_html=True)
         st.markdown("""
-            * Trained a Named Entity Recognition (NER) model on TASTEset, consisting of 700 recipes with more than 13,000 entities, 
-            to extract ingredients from raw text
-            * Applied advanced NLP techniques to clean and preprocess a dataset of 6,000+ recipes, including stopword removal and 
-            lemmatization, followed by NER based ingredients extraction and vectorization leveraging TF-IDF Vectorizer
-            * Developed a recipe recommendation model based on ingredient, cuisine, and dietary preferences using cosine similarities 
-            calculated across recipes under 10 different diets, 20 courses and over 50 cuisines
+            * Trained a custom NER model on TASTEset (700 recipes, 13,000+ entities) to extract ingredients from raw text
+            * Preprocessed 6,000+ recipes followed by NER-based ingredient extraction and TF-IDF vectorization
+            * Developed a recipe recommendation model based on ingredient, cuisine, and dietary preferences using cosine simi-
+            larity across 10 diets, 20 courses, and 50+ cuisines
         """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Indian-Food-Recommendation-based-on-Ingredients')
 
 if options == 'Web Development':
-    st.markdown(f"<h5 style='color:#50C878;'> - NoCodeML: An End-to-End Platform for Data Analysis and ML Model Building</h5>", unsafe_allow_html=True)
-    st.markdown("""
-        * Built a comprehensive platform using Python and Streamlit, enabling users to perform end-to-end data analysis
-        and model building without writing code, tested on over 20 different datasets
-        * Implemented features for data cleaning, transformation and exploratory data analysis with visualizations
-        * Facilitated seamless model training/testing and downloading with features for data preparation (train-test split,
-        normalization, encoding) reducing data preparation time by up to 50%
-    """)
-    st.link_button('Check Website', 'https://dhruv-limbani-nocodeml-app-ddipho.streamlit.app/')
-
+    proj_7, proj_8 = st.columns([1,1])
+    with proj_7:
+        st.markdown(f"<h5 style='color:#50C878;'> - NoCodeML: Simplifying the Data Science Workflow</h5>", unsafe_allow_html=True)
+        st.markdown("""
+            * Built a no-code platform enabling users to perform end-to-end data science workflows, tested on 20+ datasets
+            * Implemented features for data cleaning, transformation and exploratory data analysis with visualizations
+            * Streamlined model training/testing and data preparation (train-test split, normalization, encoding), reducing data
+            preparation time by 50%
+        """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/NoCodeML')
+    
+    with proj_8:
+        st.markdown(f"<h5 style='color:#50C878;'> - Online Banking System</h5>", unsafe_allow_html=True)
+        st.markdown("""
+            * Designed an online banking system for banking operations like account management, fund transfers, credit/debit
+            card management, and loan repayment
+            * Optimized MySQL databases and queries for transaction history, account balances, and secure fund transfers
+            * Built an interactive front-end, integrating real-time data from MySQL for an enhanced user experience
+        """)
+        st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Online-Banking-System')
 
 st.markdown(f"<h3 style='color:#9B59B6;'>Research</h3>", unsafe_allow_html=True)
 st.markdown(
