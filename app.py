@@ -79,8 +79,15 @@ intro, intro_anim = st.columns([1.75, 1])  # 1 parts for text, 1 part for animat
 with intro:
     st.write(
         """
-        Hello! I'm Dhruv, a graduate student at Columbia University pursuing MS in Computer Science with a focus on Machine Learning.
-        I completed my Bachelor's in Computer Science and Engineering at SRM Institute of Science and Technology, where I developed a passion for solving real-world problems through both software development and advanced technologies like Machine Learning, Computer Vision, Natural Language Processing, and Generative AI.
+        Hello! I'm Dhruv, a graduate student at Columbia University pursuing an MS in Computer Science with a focus on Machine Learning.
+        I completed my Bachelor's in Computer Science and Engineering at SRM Institute of Science and Technology, where I developed a strong interest 
+        in building software solutions to real-world problems using Machine Learning, Computer Vision, Natural Language Processing, and Data Engineering.
+        """
+    )
+    st.write(
+        """
+        I am always eager to explore new advancements in AI and collaborate on research or projects that push the boundaries of what's possible with data. 
+        Feel free to connect if you're interested in working together or discussing opportunities for Summer 2025!
         """
     )
     import streamlit as st
@@ -139,8 +146,8 @@ skills, skills_anim = st.columns([1.75, 1])
 with skills:
     st.markdown(
         """
-        <p><b><span style='color:#50C878;'>Programming Languages:</span></b> C, C++, Python, SQL</p>
-        <p><b><span style='color:#50C878;'>Data Analysis and Visualization:</span></b> MS Excel, Power Query, DAX, NumPy, Pandas, Matplotlib, Seaborn</p>
+        <p><b><span style='color:#50C878;'>Programming Languages and Databases:</span></b> C, C++, Python, MySQL, PostgreSQL</p>
+        <p><b><span style='color:#50C878;'>Data Engineering and Analysis:</span></b> Apache-Airflow, MS Excel, PowerBI, NumPy, Pandas, Matplotlib, Seaborn</p>
         <p><b><span style='color:#50C878;'>Machine Learning:</span></b> Scikit-Learn, TensorFlow, PyTorch, OpenCV, NLTK</p>
         <p><b><span style='color:#50C878;'>Web Development:</span></b> FastAPI, Streamlit</p>
         <p><b><span style='color:#50C878;'>Additional tools:</span></b> Git, Visual Studio Code, Jupyter, Google Colab, MySQL Workbench</p>
@@ -190,9 +197,20 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-options = st.selectbox("Choose Domain:", ['Data Analysis and Predictive Modeling', 'Computer Vision', 'Natural Language Processing', 'Web Development'])
+options = st.selectbox("Choose Domain:", ['Data Engineering, Analytics and Predictive Modeling', 'Computer Vision', 'Natural Language Processing', 'Software Development and Database'])
 
-if options == 'Data Analysis and Predictive Modeling':
+if options == 'Data Engineering, Analytics and Predictive Modeling':
+    
+    st.markdown(f"<h5 style='color:#50C878;'> - Renewable Energy Market and Risk Analysis</h5>", unsafe_allow_html=True)
+    st.markdown("""
+                * Designed a scalable ETL pipeline with Apache Airflow and PostgreSQL, automating data ingestion, transformation,
+                and storage for energy and weather data across five Spanish cities
+                * Built an LSTM (Long Short-Term Memory) model in PyTorch, achieving 0.02 RMSE in energy price forecasting
+                * Computed 7-day VaR, CVaR, and volatility using SQL, integrating insights into a real-time Power BI dashboard
+                for risk analysis
+            """)
+    st.link_button('Check Project', 'https://github.com/Dhruv-Limbani/Renewable-Energy-Price-Forecasting-and-Risk-Management-Dashboard')
+    
     proj_1, proj_2 = st.columns([1,1])
     with proj_1:
         st.markdown(f"<h5 style='color:#50C878;'> - German Credit Risk Analysis and Classification Model</h5>", unsafe_allow_html=True)
@@ -265,7 +283,19 @@ if options == 'Natural Language Processing':
         """)
         st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Indian-Food-Recommendation-based-on-Ingredients')
 
-if options == 'Web Development':
+if options == 'Software Development and Database':
+
+    st.markdown(f"<h5 style='color:#50C878;'> - SaaSy-Events - Event Management Portal</h5>", unsafe_allow_html=True)
+    st.markdown("""
+            * Collaborated with a team of six to develop a microservices-based event management application, with an Angular
+            frontend deployed on an S3 bucket, a Python FastAPI backend, and a MySQL database hosted on AWS RDS
+            * Designed and implemented a robust MySQL database to manage users, organizers, events, and tickets, optimizing
+            query performance for seamless event operations
+            * Developed a user management microservice with CRUD operations, Google OAuth 2.0 authentication, and JWTbased
+            authorization, ensuring secure access control and integrated third-party APIs for ticket QR code generation
+            """)
+    st.link_button('Check Project', 'https://github.com/SaaSy-Pants')
+
     proj_7, proj_8 = st.columns([1,1])
     with proj_7:
         st.markdown(f"<h5 style='color:#50C878;'> - NoCodeML: Simplifying the Data Science Workflow</h5>", unsafe_allow_html=True)
