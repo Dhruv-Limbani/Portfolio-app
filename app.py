@@ -79,15 +79,11 @@ intro, intro_anim = st.columns([1.75, 1])  # 1 parts for text, 1 part for animat
 with intro:
     st.write(
         """
-        Hello! I'm Dhruv, a graduate student at Columbia University pursuing an MS in Computer Science with a focus on Machine Learning.
-        I completed my Bachelor's in Computer Science and Engineering at SRM Institute of Science and Technology, where I developed a strong interest 
-        in building software solutions to real-world problems using Machine Learning, Computer Vision, Natural Language Processing, and Data Engineering.
-        """
-    )
-    st.write(
-        """
-        I am always eager to explore new advancements in AI and collaborate on research or projects that push the boundaries of what's possible with data. 
-        Feel free to connect if you're interested in working together or discussing opportunities for Summer 2025!
+        Hello! I'm Dhruv, a Master's student in Computer Science at Columbia University, specializing in Machine Learning.
+
+        I build and deploy intelligent systems to solve complex problems. My work spans Machine Learning, Natural Language Processing, and Computer Vision, with a focus on creating end-to-end solutions—from architecting data pipelines to training models and developing scalable applications.
+
+        I am actively seeking full-time opportunities as a Data Scientist or Machine Learning Engineer starting December 2025. Let's connect!
         """
     )
     import streamlit as st
@@ -146,12 +142,12 @@ skills, skills_anim = st.columns([1.75, 1])
 with skills:
     st.markdown(
         """
-        <p><b><span style='color:#50C878;'>Programming Languages and Databases:</span></b> C, C++, Python, MySQL, PostgreSQL</p>
-        <p><b><span style='color:#50C878;'>Data Engineering and Analysis:</span></b> Apache-Airflow, MS Excel, PowerBI, NumPy, Pandas, Matplotlib, Seaborn</p>
-        <p><b><span style='color:#50C878;'>Machine Learning:</span></b> Scikit-Learn, TensorFlow, PyTorch, OpenCV, NLTK</p>
-        <p><b><span style='color:#50C878;'>Web Development:</span></b> FastAPI, Streamlit</p>
-        <p><b><span style='color:#50C878;'>Additional tools:</span></b> Git, Visual Studio Code, Jupyter, Google Colab, MySQL Workbench</p>
-        <p><b><span style='color:#50C878;'>Soft Skills:</span></b> Problem Solving, Collaboration, Time Management, Adaptability, Active Listening</p>
+        <p><b><span style='color:#50C878;'>Programming:</span></b> Python, SQL, C++, C</p>
+        <p><b><span style='color:#50C878;'>Machine Learning:</span></b> PyTorch, TensorFlow, Scikit-Learn, OpenCV, NLTK, LangChain, LangGraph, MCP</p>
+        <p><b><span style='color:#50C878;'>Data Engineering & Analytics::</span></b> Pandas, NumPy, Apache Airflow, Matplotlib, Seaborn</p>
+        <p><b><span style='color:#50C878;'>Databases:</span></b> Snowflake, PostgreSQL, ClickHouse, Pinecone, MySQL</p>
+        <p><b><span style='color:#50C878;'>Additional Tools:</span></b> Git, Visual Studio Code, Jupyter, Google Colab, MySQL Workbench</p>
+        <p><b><span style='color:#50C878;'>Soft Skills:</span></b> Problem Solving, Collaboration, Time Management, Adaptability, Active Listening, Proactive Communication</p>
         """,
         unsafe_allow_html=True
     )
@@ -166,6 +162,26 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
+st.markdown(f"<h5 style='color:#50C878;'> - Chartmetric, New York, NY, US</h5>", unsafe_allow_html=True)
+st.markdown("""
+    - Data Analytics Intern, May 2025 - Aug 2025
+        * Built analytics dashboards for music curation networks, enabling real-time trend insights, suspicious user detection
+        (data scrapers) and product feature prioritization; used by C-suite for decision-making
+        * Optimized database schema by normalizing 50+ tables into relational structures, reducing system errors, storage
+        overhead, and improving query performance for LLM-driven text-to-SQL pipelines
+        * Engineered a RAG proof-of-concept for text-to-SQL, reducing LLM token usage by 44% and operational costs by
+        35% while increasing query accuracy
+""")
+st.markdown(f"<h5 style='color:#50C878;'> - Columbia University, Internet Real-Time Lab, New York, NY, US</h5>", unsafe_allow_html=True)
+st.markdown("""
+    - Research Assistant (NLP/LLMs), Jan 2025 - May 2025
+        * Developed a curated and annotated dataset of 450+ privacy policies with clauses on AI training, cross-border data
+        transfers, and advertiser data sharing to conduct research on automated privacy policy analysis using LLMs
+        * Implemented benchmarking of multiple models (GPT-4o, DeepSeek, Mistral, BERT-family) under zero-shot, few-
+        shot, and Retrieval-Augmented Generation (RAG) setups, achieving up to 99% recall in classification tasks
+""")
+
 
 st.markdown(f"<h5 style='color:#50C878;'> - Samsung R&D Institute India-Bangalore (SRI-B) Bangalore, IN</h5>", unsafe_allow_html=True)
 st.markdown("""
@@ -197,7 +213,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-options = st.selectbox("Choose Domain:", ['Data Engineering, Analytics and Predictive Modeling', 'Computer Vision', 'Natural Language Processing', 'Software Development and Database'])
+options = st.selectbox("Choose Domain:", ['LLMs and Agentic AI','Data Engineering, Analytics and Predictive Modeling', 'Computer Vision', 'Natural Language Processing', 'Software Development and Database'])
 
 if options == 'Data Engineering, Analytics and Predictive Modeling':
     
@@ -317,6 +333,16 @@ if options == 'Software Development and Database':
         """)
         st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Online-Banking-System')
 
+if options == 'LLMs and Agentic AI':
+    st.markdown(f"<h5 style='color:#50C878;'> - Interactive Data Analytics Assistant using LLMs</h5>", unsafe_allow_html=True)
+    st.markdown("""
+        * Developed an intelligent assistant powered by Google Gemini-2.5-Flash, capable of performing end-to-end data
+        analytics through conversational queries, including statistical analysis, insights generation, and visualizations
+        * Integrated multiple MCP-based tools (csv_analyzer, local_python_executor) to dynamically inspect datasets,
+        run Python/NumPy/Pandas code, and generate visual outputs with Matplotlib and Seaborn
+        * Implemented system prompts and memory for context retention, enabling accurate and reliable multi-turn analysis
+    """)
+    st.link_button('Check Website', 'https://github.com/Dhruv-Limbani/Data-Analyst-Agent')
 st.markdown(f"<h3 style='color:#9B59B6;'>Research</h3>", unsafe_allow_html=True)
 st.markdown(
     """
